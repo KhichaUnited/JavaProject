@@ -18,12 +18,21 @@ class testclass {
 }
 public class gsontesting_spid3r {
     public static void main(String[] args) throws IOException{
-        testclass t = new testclass(1,2,"yeet");
+        testclass t1 = new testclass(1,2,"yeet");
+        testclass t2 = new testclass(3,4,"object");
+        testclass[] arr = new testclass[2];
+        arr[0] = t1;
+        arr[1] = t2;
         Gson gson = new Gson();
         System.out.println("Hello world !");
         FileWriter f = new FileWriter("db.json");
-        gson.toJson(t,f);
+        gson.toJson(arr,f);
         f.close();
+        FileReader r = new FileReader("db.json");
+        testclass[] arr2 = gson.fromJson(r,testclass[].class);
+        System.out.println(arr2[0].name);
+        System.out.println(arr2[1].name);
         System.out.println("Done");
+        r.close();
     }
 }
