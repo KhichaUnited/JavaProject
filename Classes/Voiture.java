@@ -1,5 +1,8 @@
+import java.sql.Blob;
+
 public class Voiture {
     private String matricule, marque, couleur;
+    public boolean isTaken = false ;
 
     // ********************constructor****************** */
     public Voiture(String matricule, String marque, String couleur) {
@@ -20,7 +23,14 @@ public class Voiture {
     String getCouleur() {
         return couleur;
     }
+    
+    boolean getTaken() {
+        return isTaken;
+    }
 
     // ********************setters****************** */
-    
+    void setTaken(boolean isTaken) {
+        this.isTaken = isTaken ;
+    }
+
 }
