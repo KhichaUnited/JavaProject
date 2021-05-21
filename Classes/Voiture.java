@@ -1,28 +1,26 @@
 public class Voiture {
-    private int id;
-    private String mat;
+    private String matricule, marque, couleur;
 
     // ********************constructor****************** */
-    public Voiture(int id, String mat) {
-        this.id = id;
-        this.type = type;
+    public Voiture(String matricule, String marque, String couleur) {
+        this.matricule = matricule;
+        this.marque = marque;
+        this.couleur = couleur;
     }
 
     // ********************getters****************** */
-    int getId() {
-        return id;
+    String getMatricule() {
+        return matricule;
     }
 
-    String getMat() {
-        return mat;
+    String getMarque() {
+        return marque;
+    }
+
+    String getCouleur() {
+        return couleur;
     }
 
     // ********************setters****************** */
-    void setId(int id) {
-        this.id = id;
-    }
-
-    void setMat(String mat) {
-        this.mat = mat;
-    }
+    
 }
