@@ -30,4 +30,10 @@ public class Client extends User {
             System.out.println(tab.get(i) + "/  ");
         }
     }
+    boolean isRenting(){
+        if (tab.size()==0) 
+        return false;
+        else
+        return true;
+    }
 }
