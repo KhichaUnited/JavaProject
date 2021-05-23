@@ -17,7 +17,7 @@ public class voitureInterface  {
 
     public void addVoiture(Voiture newvoiture){
         List<Voiture> arr = getList();
-        arr.add(newadmin);
+        arr.add(newvoiture);
         Gson gson = new Gson();
         FileWriter f = new FileWriter("voitures.json");
         gson.toJson(arr,f);
@@ -25,7 +25,7 @@ public class voitureInterface  {
     }
 
     public void removeVoiture(String matricule){
-        List<Admin> arr = getList();
+        List<Voiture> arr = getList();
         for (int i = 0; i < arr.size(); i++) {
             if( (arr.get(i).getMatricule() == matricule) && (arr.get(i).getTaken() == false) ){
                 arr.remove(i);
