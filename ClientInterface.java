@@ -23,7 +23,6 @@ public class ClientInterface  {
         FileWriter f = new FileWriter("clients.json");
         gson.toJson(arr,f);
         f.close();
-        }
     }
     public void removeClient(String login){
         List<Client> arr = getList();
