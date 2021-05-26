@@ -10,10 +10,6 @@ public class Client extends User {
         tab = new ArrayList<>();
     }
 
-    // ********************getters****************** */
-
-    // ********************setters****************** */
-
     // ********************affichage****************** */
     public String toString() {
         return (super.toString());
